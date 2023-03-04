@@ -3,18 +3,40 @@
   <head>
     <title>My Personal Webpage</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+
   </head>
   <body>
     <div class="header">
       <h1>I-Tung Chen</h1>
       <p>PhD student at UW ECE</p>
     </div>
+
+  <img id="photo" src="profile-pic-snow.jpg" class="center" border="2" style="margin:20px 200px" width="300">
+  <script>
+      function resize() { 
+      var photo = document.getElementById("photo");
+      var w = window.innerWidth;
+      if (w < 1000) {
+        photo.height = w * (300. / 1000.);
+        photo.width  = w * (300. / 1000.);
+        photo.align="right";
+      } else {
+        photo.align="right";
+      }
+      }
+
+      window.onresize = resize;
+
+      resize();
+  </script>
+
     <div class="container">
-      <img src="https://github.com/itungc/itungc.github.io/blob/master/profile-pic-snow.jpg" alt="" width="200" height="200">
+      
       <h2>About Me</h2>
       <p>Hello, my name is I-Tung and I am currently a PhD student in ECE department at University of Washington (UW). I am interested
          in Quantum technologies and ocationally playing frech horns in symphonic orchestra.</p>
-         
+      
+ 
       <h2>Contact Me</h2>
       <ul>
         <li>Email: itungc@uw.edu</li>
